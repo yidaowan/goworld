@@ -26,7 +26,7 @@ func NewXZListAOIManager(aoidist Coord) AOIManager {
 
 // Enter is called when Entity enters Space
 func (aoiman *XZListAOIManager) Enter(aoi *AOI, x, y Coord) {
-	//aoi.dist = aoiman.aoidist
+	aoi.dist = aoiman.aoidist
 
 	xzaoi := &xzaoi{
 		aoi:       aoi,

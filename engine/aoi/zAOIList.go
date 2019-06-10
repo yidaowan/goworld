@@ -130,14 +130,14 @@ func (sl *yAOIList) Mark(aoi *xzaoi) {
 	prev := aoi.yPrev
 	coord := aoi.aoi.y
 
-	minCoord := coord - aoi.aoi.dist
+	minCoord := coord - sl.aoidist
 	for prev != nil && prev.aoi.y >= minCoord {
 		prev.markVal += 1
 		prev = prev.yPrev
 	}
 
 	next := aoi.yNext
-	maxCoord := coord + aoi.aoi.dist
+	maxCoord := coord + sl.aoidist
 	for next != nil && next.aoi.y <= maxCoord {
 		next.markVal += 1
 		next = next.yNext
@@ -148,14 +148,14 @@ func (sl *yAOIList) ClearMark(aoi *xzaoi) {
 	prev := aoi.yPrev
 	coord := aoi.aoi.y
 
-	minCoord := coord - aoi.aoi.dist
+	minCoord := coord - sl.aoidist
 	for prev != nil && prev.aoi.y >= minCoord {
 		prev.markVal = 0
 		prev = prev.yPrev
 	}
 
 	next := aoi.yNext
-	maxCoord := coord + aoi.aoi.dist
+	maxCoord := coord + sl.aoidist
 	for next != nil && next.aoi.y <= maxCoord {
 		next.markVal = 0
 		next = next.yNext
