@@ -104,6 +104,7 @@ func (space *Space) EnableAOI(defaultAOIDistance Coord) {
 	space.Attrs.SetFloat(_SPACE_ENABLE_AOI_KEY, float64(defaultAOIDistance))
 	space.aoiMgr = aoi.NewXZListAOIManager(aoi.Coord(defaultAOIDistance))
 	//space.aoiMgr = aoi.NewTowerAOIManager(-500, 500, -500, 500, 10)
+	gwlog.Infof("%s.EnableAOI: success. defaultAOIDistance = %f", space, defaultAOIDistance)
 }
 
 //func (space *Space) UseTowerAOI(minX, maxX, minY, maxY Coord, towerRange Coord) {
