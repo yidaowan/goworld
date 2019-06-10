@@ -3,7 +3,7 @@ package entity
 import (
 	"fmt"
 
-	"github.com/xiaonanln/go-aoi"
+	"github.com/xiaonanln/goworld/engine/aoi"
 	"github.com/xiaonanln/goworld/engine/common"
 	"github.com/xiaonanln/goworld/engine/consts"
 	"github.com/xiaonanln/goworld/engine/gwlog"
